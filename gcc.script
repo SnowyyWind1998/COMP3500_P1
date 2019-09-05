@@ -1,0 +1,43 @@
+Script started on Wed 04 Sep 2019 08:38:20 PM CDT
+[?1034hbash-4.2$ gcc -v
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) 
+bash-4.2$ gcc -g -ls[Km -o simple simple.c
+/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+bash-4.2$ man ldd
+[?1049h[?1h=LDD(1)                                    Linux Programmer's Manual                                    LDD(1)[m
+[m
+[1mNAME[0m[m
+       ldd - print shared library dependencies[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mldd[0m [OPTION]... FILE...[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mldd[0m  prints  the  shared libraries required by each program or shared library specified on the command[m
+       line.[m
+[m
+   [1mSecurity[0m[m
+       In  the  usual  case,  [1mldd[0m  invokes  the   standard   dynamic   linker   (see   [1mld.so[0m(8))   with   the[m
+       [1mLD_TRACE_LOADED_OBJECTS[0m  environment variable set to 1, which causes the linker to display the library[m
+       dependencies.  Be aware, however, that in some circumstances, some versions  of  [1mldd[0m  may  attempt  to[m
+       obtain  the  dependency  information by directly executing the program.  Thus, you should [4mnever[24m employ[m
+       [1mldd[0m on an untrusted executable, since this may result in the execution of  arbitrary  code.   A  safer[m
+       alternative when dealing with untrusted executables is:[m
+[m
+           $ objdump -p /path/to/program | grep NEEDED[m
+[m
+[1mOPTIONS[0m[m
+[7m Manual page ldd(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049lbash-4.2$ ldd simple
+ldd: ./simple: No such file or directory
+bash-4.2$ exit
+exit
+
+Script done on Wed 04 Sep 2019 08:40:04 PM CDT

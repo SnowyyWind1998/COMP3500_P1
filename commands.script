@@ -1,0 +1,45 @@
+man [command] - displays the help information for the specified command.
+	This command can be used to display the user manual of any command that we can run on the terminal. It provides a detailed view of the command which includes name, synopsis, description, options, exit status, return values, errors, files, version, examples, authors and see also.
+
+cd - changes a directory.
+	This comman can be used to change our current directory. For example, if we current at COMP3500 directory and we want enter project1 directory. We can just enter "cd project1". And  also, if we want o go back to the directory "COMP3500", we just need to enter "cd".
+
+pwd - displays the pathname for the current directory
+	This command will show where I am in the file system.
+
+ls - list the files in the current directory
+	This command will show all the files in current directory.
+
+mkdir - makes a new directory
+	This command will create a new directory in current directory.
+	EXP:
+	mkdir test    //Make a new directory called test in current directory.
+
+cp - copies a file from one location to another
+	This command will copy the file to another location
+	EXP:
+	cp helloworld.cpp test   //copy the file called helloworld.cpp from current location to test directory.
+
+mv - moves a file from one location to another
+	This command will move the file to another location
+	EXP:
+	mv helloworld.cpp test   //move the file called helloworld.cpp from current location to test directory.
+
+rm - removes a file
+	This command will remove the file.
+	EXP:
+	rm helloworld.cpp   //delete the file called helloworld.cpp
+
+chmod [options] mode dilename - changes a file's permissions
+
+
+clear - clears a all command line screen/window for a fresh start
+	This command will clear all the information show on the terminal right now and start a fresh line.
+
+who [options] -displays who is logged on
+	This command will show who is logged on the sever with me at the same time.
+
+nproc - displays the number of cores
+	This command will show how many cpu cores we have in our system.
+	For my laptop, it shows 12 core.
+	For AU server, it shows 16 core.	
